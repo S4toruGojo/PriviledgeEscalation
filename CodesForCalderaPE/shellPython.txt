@@ -1,0 +1,6 @@
+Per elevare la shell ad una più interattiva basata su Python esegui in ordine questi comandi:
+
+- python3 -c 'import pty; pty.spawn("bin/bash")'
+- CTRL + Z (combinazione di tasti da tastiera, mette in background il processo in esecuzione)
+- stty raw -echo; fg
+- export TERM=xterm

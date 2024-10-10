@@ -1,0 +1,22 @@
+In this repository there are some scripts and codes for archieving a Privilege Escalation in Ubuntu 18.04 enviroments.
+There are two scripts: autonameHiding.sh and sudoFIX.sh. The first one automatizes the process of renaming the process name which has to be hidden. For using it, just put the script in the same folder as the file, modify it changing the name of the file which has to be modified and the process name which has to be hidden.
+The second one fixes the sudo's vulnerability which makes this cyber attack possible. Since it searches and modifies the sudoers file all by itself, you just need to download it into the target system and you're good to go.
+NB. Both these scripts have to be stored in the system and ready to execute before the start of the procedure if you want to use them, otherwise they won't work: the agents aren't able to perform these actions by themselves nor using the operations which these scripts do, they're just able to launch them. Modify them before the start of any operation, since after the start of the procedure you won't be able to do it.
+There are several other .txt files included: these files rapresent the abilites needed by the Caldera agents to perform the Privilege Escalation (almost) autonomously, because Caldera doesnt' allow to perform every action needed to archieve the Privilege Escalation all by itself, we also included two files, the one named shellPython.txt and the one named revereShell.txt. The first one explains the procedure needed to perform the elevation of a shell (not in terms of PE, but for funcionality manners), starting with a simple one, obtaining a more complex one based on Python. You may need it for example if you have to modify some files, or get rid of the echo. The second file explains how to open a reverse shell between two PCs, another action impossible to do for the Caldera agents.
+For all the other .txt. files, just copy and paste the commands that you'll find, adding them as new abilities in Caldera, each ability for each .txt file.
+To archieve the Privilege Escalation in Caldera, using these abilities, you have to:
+1 - Launch an agent on the attacker in background mode.
+2 - Open the reverse shell (manually), following the commands in the reverseShell.txt file.
+3 - Launch the second agent on the reverse shell.
+4 - Launch the ability made with the codes copied from the linpeas.txt file.
+5 - Launch the ability made with the code copied from the sudoPE.txt file.
+6 - Kill the agents and the reverse shell, elevate the shell manually following the commands in the shellPython.txt file.
+7 - Launch a new agent on the attacker.
+8 - Re-open another reverse shell, with the same commands from the reverseShell.txt file.
+9 - Launch another new agent on the new reversre shell.
+10 - Launch another time the ability relative to the sudoPE.txt file, to have more coherency with the situation before interrupting the attack.
+11 - Launch the ability made with the code copied from the libprocesshider.txt file.
+12 - Launch the script autonameHiding.sh (use an ability to launch it).
+13 - Launch the ability made with the code copied from the libprochiderLibrary.txt.
+
+NB. You can try to avoid the elevation of the shell's funcionalities in this enviroment, we needed it for other purposes, in this case after the point 5, go to 11.
