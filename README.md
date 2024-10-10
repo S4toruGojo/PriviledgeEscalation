@@ -33,5 +33,6 @@ For the other `.txt` files, simply copy and paste the commands into Caldera as n
 11. Execute the ability created from the `libprocesshider.txt` file.
 12. Use an ability to launch the `autonameHiding.sh` script.
 13. Execute the ability created from the `libprochiderLibrary.txt` file.
+14. If you want to fix the vulnerability, in the same way as step 12, use an ability to launch the `sudoFIX.sh` script.
 
 NB: If you don’t need to elevate the shell's functionality in this environment, skip directly to step 11 after step 5.
